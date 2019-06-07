@@ -34,7 +34,7 @@ app.get("/movie/:id", (req, res) => {
 
 app.post("/movies", (req, res) => {
     controller.saveMovie(req.body.title).then(movie => {
-        res.send(movie);
+        res.status(200).send(movie);
     });
 });
 
